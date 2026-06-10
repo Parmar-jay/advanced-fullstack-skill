@@ -1,3 +1,8 @@
+---
+name: fullstack-python-skill
+description: "Production-grade fullstack scaffold: FastAPI + MongoDB + React + Vite with JWT auth, OAuth, role-based access, and security hardening."
+---
+
 # 🧠 Fullstack Python Skill — Coding Agent Instruction File
 
 ## Overview

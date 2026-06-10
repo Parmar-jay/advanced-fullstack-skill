@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: fullstack_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: fullstack_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Bind mount for live reloading during development
+      - ./backend:/app
+      # Do not overwrite node_modules/venv in container
+      - /app/venv
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017
+      - DB_NAME=myapp
+      - JWT_SECRET=fallback-temp-jwt-secret-do-not-use-in-production
+      - JWT_REFRESH_SECRET=fallback-temp-jwt-refresh-secret-do-not-use-in-production
+      - CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+      - APP_NAME=MyApp
+      - APP_ENV=development
+      - DEBUG=true
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: fullstack_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+      - VITE_APP_NAME=MyApp
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

@@ -1,0 +1,43 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Database
+motor==3.5.1
+pymongo==4.8.0
+
+# Validation & Settings
+pydantic==2.8.2
+pydantic-settings==2.4.0
+email-validator==2.2.0
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+argon2-cffi==23.1.0
+
+# Utilities
+python-multipart==0.0.9
+python-dotenv==1.0.1
+httpx==0.27.0
+
+# Email
+aiosmtplib==3.0.1
+
+# Rate Limiting
+slowapi==0.1.9
+limits==3.13.0
+
+# Security / Sanitization
+bleach==6.1.0
+
+# File Uploads
+cloudinary==1.44.2
+
+# HTTP
+requests==2.32.3
+
+# Dev / Performance
+watchfiles==1.0.0
+websockets==13.1
+httptools==0.6.4

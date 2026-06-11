@@ -38,8 +38,8 @@ This skill enables any coding agent to scaffold, build, and extend a production-
 | Routing | react-router-dom v6 |
 | HTTP | axios (with interceptors for token refresh) |
 | State | React Context API |
-| Styling | Vanilla CSS (Managed by dedicated "UI UX Pro Max" skill; do not write custom styles) |
-| Animations | CSS transitions (Do not add custom visual transitions without instructions) |
+| Styling | Tailwind CSS & CSS (Styled according to "UI UX Pro Max" skill guidelines) |
+| Animations | GSAP (Core, ScrollTrigger, Timeline) & CSS transitions (Configured via `@gsap/react`) |
 
 ---
 
@@ -207,12 +207,12 @@ VITE_GOOGLE_CLIENT_ID=your-google-client-id
 - Use `Depends(require_role("manager", "admin"))` for multi-role access
 
 ### UI/UX & Frontend Styling (Coexistence with "UI UX Pro Max" Skill)
-To ensure that functional changes do not disrupt the presentation layer:
-- **Do Not Write/Modify Custom CSS**: Never add new styling files or modify existing classes/rules in `frontend/src/styles/index.css` or `:root` custom properties.
-- **Do Not Use Inline Styles**: Do not use React inline styling `style={{ ... }}` on HTML tags.
-- **Pure Logic-Only Implementation**: Focus exclusively on functional implementation (e.g. state management, API data-fetching/submitting, react-router-dom structure, auth Context, backend routing, DB interactions). Keep structural wrappers clean and semantic.
-- **Use Only Existing Styling Classes**: Utilize only the pre-existing utility and styling classes defined in `index.css` (e.g. `.btn`, `.btn-primary`, `.form-group`, `.form-input`, `.card`, `.alert`, etc.).
-- **Design Hand-off**: If a new feature requires unique layouts, alignments, spacing, or visual decorations, author the React component using generic and descriptive placeholder class names (e.g. `className="post-card-container"`), and ask the user to invoke their dedicated **UI UX Pro Max** skill to design and style it.
+To ensure styling, layout, positioning, and animation changes do not interfere with functional development or break responsiveness:
+- **Tailwind CSS Utility Classes**: Use Tailwind CSS utility classes exclusively for all layout structures, margins, paddings, flexing, and colors. Do not write custom CSS in `frontend/src/styles/index.css` unless defining theme extensions or base animations.
+- **GSAP Animations**: Use GSAP (Core, Timeline, ScrollTrigger) paired with `@gsap/react`'s `useGSAP` hook for all interactive element animations, scroll-linked movements, parallax, and entry timelines. Never use raw `useEffect` blocks for GSAP to avoid memory leaks.
+- **Theme and Branding Constraints**: Adhere to the design system tokens, typography pairing configurations (display/serif/sans), and color modes defined in [UI_UX_PRO_MAX_SKILL.md](file:///d:/fullstack-python-skill/UI_UX_PRO_MAX_SKILL.md).
+- **Asset Acquisition**: Retrieve high-fidelity visual context/theme-appropriate images from Unsplash or write premium inline SVGs using the curated list of fallback assets in the [UI_UX_PRO_MAX_SKILL.md](file:///d:/fullstack-python-skill/UI_UX_PRO_MAX_SKILL.md) handbook.
+- **Design Hand-off & Separation of Concerns**: Coding agents implementing core logic should structure React components with clean Tailwind containers and layout classes. If a component requires premium styling or animations, refer to the [UI_UX_PRO_MAX_SKILL.md](file:///d:/fullstack-python-skill/UI_UX_PRO_MAX_SKILL.md) instructions to refine the visual presentation, transitions, and mouse coordinates.
 
 ---
 

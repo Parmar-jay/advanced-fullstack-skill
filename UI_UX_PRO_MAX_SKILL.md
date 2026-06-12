@@ -283,6 +283,52 @@ Add premium geometric structures to card and hero backgrounds inline. Do not use
 
 ---
 
+## ⚡ World-Class Landing Page Blueprint System
+
+To create an enormous variety of unique, high-conversion websites, use the dynamic layout blueprints documented below. Each contains specialized structures for headers, heroes, core content, forms, auth states, and footers. They can be fetched in either JSX (standard React) or TSX (TypeScript React) formats directly from the Home page UI:
+
+### 1. The Luxury Obsidian & Gold Template
+- **Aesthetic**: Premium Dark, High-End SaaS, Agency, and E-Commerce.
+- **Typography**: Display: `font-display` (Syne), Body: `font-sans` (Satoshi / Inter).
+- **Structure**:
+  - *Navbar*: Fixed glassmorphic dark header with fine gold border and interactive hover triggers.
+  - *Hero*: Centered high-contrast typography, text reveal, magnetic CTA buttons, and a slow-drifting gold radial glow background.
+  - *Main*: Bento grids displaying feature sets, floating gold cards, and parallax product displays.
+  - *Auth/Forms*: Integrated glass-card login modal / feedback-driven newsletter form with golden focus rings.
+  - *Footer*: Multi-column minimal gold links with interactive hovering states.
+
+### 2. The Neon Cyberpunk (Web3 & Tech) Template
+- **Aesthetic**: Dark Futuristic, Web3, Gaming, and SaaS Dashboard.
+- **Typography**: Display: `font-display` (Space Grotesk), Body: `font-sans` (Inter).
+- **Structure**:
+  - *Navbar*: Sticky dark slate container with violet/cyan border.
+  - *Hero*: Multi-color neon glow background (`from-cyber-violet via-cyber-fuchsia to-cyber-cyan`), matrix-like dot grid SVG overlay, and typewriter hero animation.
+  - *Main*: Asymmetric grids with neon border-glow cards, interactive statistics grids.
+  - *Auth/Forms*: Cyberpunk terminal input fields with neon green validation badges.
+  - *Footer*: High-tech index list showing status indicators and code-like copyright widgets.
+
+### 3. The Sophisticated Minimalist (Creative & Editorial) Template
+- **Aesthetic**: Neutral Cream/Sand Light Mode with Burnt Terracotta or Forest Green.
+- **Typography**: Display: `font-display` (Playfair Display / Serif), Body: `font-sans` (Plus Jakarta Sans).
+- **Structure**:
+  - *Navbar*: Completely transparent flat header, shifting to slide-in menu panel.
+  - *Hero*: Asymmetrical left-aligned serif typography, large clean spaces (`py-36`), and custom-masked layout offsets.
+  - *Main*: Clean grids with generous paddings, photo frames with thin black borders, and editorial narratives.
+  - *Auth/Forms*: Minimal underline input fields with fluid label-float animations.
+  - *Footer*: Giant serif copyright banner with clean social listings.
+
+### 4. The Clean Corporate (Startup & Enterprise) Template
+- **Aesthetic**: Modern Professional, E-Commerce Showcase, and Tech Corporate.
+- **Typography**: Display: `font-display` (Outfit), Body: `font-sans` (Plus Jakarta Sans).
+- **Structure**:
+  - *Navbar*: Clean white/slate layout, structured drop-downs, and a quick-action button.
+  - *Hero*: Split 2-column layout (bold text block on left, high-fidelity mockups/interactive cards on right).
+  - *Main*: Customer logos scroll-marquee, detailed analytics list, interactive pricing table with tabs.
+  - *Auth/Forms*: Structured card-based signin/signup layouts with auto-focus and clear input helpers.
+  - *Footer*: Corporate Sitemap style with extensive directories.
+
+---
+
 ## ⚡ Performance, Load Time, and CLS Checklist
 
 Ensure that the web experience feels fluid and does not lag:
